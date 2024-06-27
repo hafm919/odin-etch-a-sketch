@@ -1,11 +1,12 @@
 const grid=document.querySelector('.grid');
 const GRID_DIMENSIONS=500;
 const DEFAULT_GRID_SIZE=16;
+const DEFAULT_COLOR='black';
 let gridBoxDimensions=GRID_DIMENSIONS/DEFAULT_GRID_SIZE;
+let penColor=DEFAULT_COLOR;
 
 
 let mouseDown=false;
-
 document.body.addEventListener('mousedown',()=>{
     mouseDown=true;
     console.log('down');
@@ -15,6 +16,28 @@ document.body.addEventListener('mouseup',()=>{
     mouseDown=false;
     console.log('up');
 })
+
+const colorPicker=document.querySelector(".color-picker");
+const colorPickerWrapper=document.querySelector(".color-picker-wrapper");
+colorPickerWrapper.style.backgroundColor=colorPicker.value;
+
+colorPicker.addEventListener('input',()=>{
+    colorPickerWrapper.style.backgroundColor=colorPicker.value;
+    penColor=colorPicker.value;
+})
+
+const slider=document.querySelector('.slider');
+const sliderDisplay=document.querySelector('.grid-size-display');
+slider.value=DEFAULT_GRID_SIZE;
+sliderDisplay.textContent=`${slider.value} x ${slider.value}`;
+slider.addEventListener('input',()=>{
+    sliderDisplay.textContent=`${slider.value} x ${slider.value}`;
+});
+slider.addEventListener('change',()=>{
+    setGridSize(slider.value);
+});
+
+
 
 const button=document.querySelector('button');
 button.onclick=()=>{
@@ -46,7 +69,7 @@ function changeBoxColour(e){
         return;
     }
     console.log(e.target.id);
-    e.target.style.backgroundColor='blue';
+    e.target.style.backgroundColor=penColor;
 
 }
 
