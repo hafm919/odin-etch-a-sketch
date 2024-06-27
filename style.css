@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+
+    background-color: #FFF7F1;
+
+}
+
+.container{
+    display:flex;
+    justify-content: center;
+
+}
+
+.grid{
+    background-color: #FFFFFF;
+    flex-wrap: wrap;
+    height:500px;
+    flex-basis: 500px;
+    display:flex;
+    /* border:black 1px solid; */
+    flex-grow: 0px;
+    box-shadow: 1px 5px;
+    
+}
+
+.title{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800px;
+    font-size: 64px;
+    text-align: center;
+    color: #E78895;
+}
