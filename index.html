@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,13 +18,18 @@
             <div class="color-picker-wrapper">
                 <input type="color" class="color-picker">
             </div>
-            <button>Color Mode</button>
+            <button id='color' class="active">Color Mode</button>
+            <button id="eraser">Eraser Mode</button>
+            <button id="rainbow">Rainbow Mode</button>
             <div>
                 <h2 class="grid-size-display"></h2>
                 <input type="range" min="1" max="100" value="50" class="slider" id="myRange" width="100%">
             </div>
         </div>
         <div class="grid"></div>
+    </div>
+    <div class="footer">
+        &copy; Hafm919 2024
     </div>
     
     

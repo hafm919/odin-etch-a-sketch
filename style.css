@@ -1,9 +1,19 @@
-*{
-    box-sizing: border-box;
-}
+html, body {
+    margin:0;
+    padding:0;
+    height:100%;
+ }
 
 body{
     background-color: #FFF7F1;
+    display:flex;
+    height: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+    
+}
+.class-picker{
+    cursor: pointer; 
 }
 
 
@@ -11,12 +21,13 @@ body{
     border-radius: 100%;
     transition: box-shadow 0.3s ease; 
     transition: transform .2s;
+    cursor: pointer; 
 
 }
 
 .color-picker-wrapper:hover{
     box-shadow: 0px 7px 66px 0px rgba(0,0,0,0.33);
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 input[type="color"] {
 	opacity: 0;
@@ -28,8 +39,6 @@ input[type="color"] {
 .container{
     display:flex;
     justify-content: center;
-    
-
 }
 
 .grid{
@@ -38,7 +47,7 @@ input[type="color"] {
     height:500px;
     flex-basis: 500px;
     display:flex;
-    /* border:black 1px solid; */
+   
     flex-grow: 0px;
     box-shadow: 10px 10px 83px -4px rgba(0,0,0,0.32);
     
@@ -71,11 +80,11 @@ input[type="color"] {
 }
 
 .slidecontainer {
-    width: 100%; /* Width of the outside container */
+    width: 100%; 
   }
   
-  /* The slider itself */
-  .slider {
+
+.slider {
     -webkit-appearance: none;  
     appearance: none;
     width: 100%; 
@@ -85,37 +94,37 @@ input[type="color"] {
     opacity: 0.7;
     -webkit-transition: .2s; 
     transition: opacity .2s;
-  }
-  
+}
 
-  .slider:hover {
+
+.slider:hover {
     opacity: 1;
-  }
-  
+}
 
-  .slider::-webkit-slider-thumb {
+
+.slider::-webkit-slider-thumb {
     -webkit-appearance: none; 
     appearance: none;
     width: 25px; 
     height: 25px; 
     background: #E78895; 
     cursor: pointer; 
-  }
-  
-  .slider::-moz-range-thumb {
+}
+
+.slider::-moz-range-thumb {
     width: 25px; 
     height: 25px; 
     background: #E78895; 
     cursor: pointer; 
-  }
+}
 
 button{
     padding:20px;
-    background-color: #E78895;
-    color:#FFF7F1;
+    color:#E78895;
+    background-color: #FFF7F1;
     width: 100%;
-    border-radius: 10px;
-    border-style: none;
+    border-radius: 5px;
+    border:#E78895 1px solid;
     font-family: "Montserrat", sans-serif;
     font-weight: 300px;
     font-size: 20px;
@@ -126,7 +135,23 @@ button{
 }
 
 button:hover{
-    box-shadow: 0px 7px 66px 0px rgba(0,0,0,0.33);
-    transform: scale(1.1);
+    /* box-shadow: 0px 7px 66px 0px rgba(0,0,0,0.33); */
+    transform: scale(1.05);
     
+}
+
+.active{
+    background-color: #E78895;
+    color:#FFF7F1;
+
+}
+
+.footer{
+    background-color: #E78895;
+    width:100%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    color:#FFF7F1;
+    margin-top: 20px;
+    text-align: center;
 }
